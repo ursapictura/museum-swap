@@ -22,7 +22,7 @@ function ShowArtworks() {
   return (
     <div className="text-center my-4">
       <Link href="/artwork/new" passHref>
-        <Button>Add An Artwork</Button>
+        <Button variant="light">Add An Artwork</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {/* map over authors here using AuthorCard component */}

@@ -17,10 +17,12 @@ function ArtworkCard({ artObj, onUpdate }) {
       <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ width: '18rem' }} />
       <Card.Body>
         <Card.Title>{artObj.title}</Card.Title>
+        <h5 className="card-text bold">{artObj.artist}</h5>
+        <p className="card-text">{artObj.medium}</p>
         <Link href={`/artwork/edit/${artObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button variant="outline-info">EDIT</Button>
         </Link>
-        <Button variant="danger" onClick={deleteThisArtwork} className="m-2">
+        <Button variant="outline-dark" onClick={deleteThisArtwork} className="m-2">
           DELETE
         </Button>
       </Card.Body>
@@ -32,6 +34,8 @@ ArtworkCard.propTypes = {
   artObj: PropTypes.shape({
     image: PropTypes.string,
     title: PropTypes.string,
+    artist: PropTypes.string,
+    medium: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

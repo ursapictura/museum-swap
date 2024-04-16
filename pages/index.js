@@ -13,11 +13,12 @@ function Home() {
         padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
+        color: 'whitesmoke',
       }}
     >
       <h1>Hello {user.displayName}! </h1>
       <p>Click the button below to logout!</p>
-      <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
+      <Button variant="outline-warning" type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
       </Button>
     </div>
