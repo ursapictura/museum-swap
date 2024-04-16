@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-// import Link from 'next/link';
+import { Button, Card } from 'react-bootstrap';
+import Link from 'next/link';
 import { deleteSingleArtwork } from '../api/artworkData';
 
 function ArtworkCard({ artObj, onUpdate }) {
@@ -15,9 +14,12 @@ function ArtworkCard({ artObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ height: '400px' }} />
+      <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ width: '18rem' }} />
       <Card.Body>
         <Card.Title>{artObj.title}</Card.Title>
+        <Link href={`/artwork/edit/${artObj.firebaseKey}`} passHref>
+          <Button variant="info">EDIT</Button>
+        </Link>
         <Button variant="danger" onClick={deleteThisArtwork} className="m-2">
           DELETE
         </Button>
