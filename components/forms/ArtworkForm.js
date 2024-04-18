@@ -38,7 +38,7 @@ function ArtworkForm({ obj }) {
       createArtwork(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateArtwork(patchPayload).then(() => {
-          router.push('/');
+          router.push('/artworks');
         });
       });
     }
@@ -55,6 +55,18 @@ function ArtworkForm({ obj }) {
           placeholder="Enter Artwork Title"
           name="title"
           value={formInput.title}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      {/* ARTIST INPUT  */}
+      <FloatingLabel controlId="floatingInput1" label="Artist's Name" className="mb-3">
+        <Form.Control
+          type="artist"
+          placeholder="Artist's Name"
+          name="artist"
+          value={formInput.artist}
           onChange={handleChange}
           required
         />
