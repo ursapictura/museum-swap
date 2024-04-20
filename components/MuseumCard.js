@@ -13,7 +13,7 @@ function MuseumCard({ museumObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card key={museumObj.firebaseKey} style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={museumObj.image} alt={museumObj.name} style={{ width: '18rem' }} />
       <Card.Body>
         <Card.Title className="art-title">{museumObj.name}</Card.Title>

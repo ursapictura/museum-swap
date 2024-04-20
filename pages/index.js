@@ -26,7 +26,7 @@ function Home() {
       <div className="d-flex flex-wrap">
         {/* TODO: map over books here using BookCard component */}
         {museums.map((museum) => (
-          <MuseumCard key={museum.firebaseKey} museumObj={museum} onUpdate={getMuseums} />
+          <MuseumCard key={museum.firebaseKey} museumObj={museum} onUpdate={getAllMuseums} />
         ))}
       </div>
     </div>
