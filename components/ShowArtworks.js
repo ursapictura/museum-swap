@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import { getArtworks } from '../api/artworkData';
 import ArtworkCard from './ArtworkCard';
-import searchArtwork from '../api/mergeData';
+import { searchArtwork } from '../api/mergeData';
 
 function ShowArtworks({ search }) {
   const [artworks, setArtworks] = useState([]);

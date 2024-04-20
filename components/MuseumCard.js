@@ -18,6 +18,9 @@ function MuseumCard({ museumObj, onUpdate }) {
       <Card.Body>
         <Card.Title className="art-title">{museumObj.name}</Card.Title>
         <h5 className="card-text bold">{museumObj.location}</h5>
+        <Link href={`/museum/${museumObj.firebaseKey}`} passHref>
+          <Button variant="primary" className="m-2">VIEW</Button>
+        </Link>
         <Link href={`/museum/edit/${museumObj.firebaseKey}`} passHref>
           <Button variant="outline-info">EDIT</Button>
         </Link>

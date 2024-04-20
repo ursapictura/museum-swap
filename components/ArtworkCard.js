@@ -14,13 +14,6 @@ function ArtworkCard({ artObj, onUpdate }) {
       deleteSingleArtwork(artObj.firebaseKey).then(() => onUpdate());
     }
   };
-  // const getArtworkMuseums = () > {
-  //   getArtworkLocation(artObj.firebaseKey).then(setArtwork);
-  // }
-
-  //   useEffect(() => {
-  //     getArtworkLocation(artObj.firebaseKey).then(setArtwork).then(console.warn(setArtwork));
-  //   }, [artObj.firebaseKey]);
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
