@@ -18,7 +18,6 @@ const searchArtwork = async (uid, searchQuery) => {
 
 const deleteMuseumArtworks = (museumId) => new Promise((resolve, reject) => {
   getMuseumArtworks(museumId).then((artworkArray) => {
-    console.warn(artworkArray, 'Museum Art');
     const deleteArtworkPromises = artworkArray.map((artwork) => deleteSingleArtwork(artwork.firebaseKey));
 
     Promise.all(deleteArtworkPromises).then(() => {

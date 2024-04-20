@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { deleteSingleArtwork } from '../api/artworkData';
-// import { getArtworkLocation } from '../api/mergeData';
 
 function ArtworkCard({ artObj, onUpdate }) {
-  console.warn(artObj);
-  // const [artwork, setArtwork] = useState([]);
-
   const deleteThisArtwork = () => {
     if (window.confirm(`Delete ${artObj.title}?`)) {
       deleteSingleArtwork(artObj.firebaseKey).then(() => onUpdate());

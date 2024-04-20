@@ -33,7 +33,6 @@ export default function ViewMuseum() {
       </div>
 
       <div className="d-flex flex-wrap">
-        {console.warn(museumDetails)}
         { museumDetails.artworks?.map((artwork) => (
           <ArtworkCard key={artwork.firebaseKey} artObj={artwork} onUpdate={getMuseumDetails} />
         ))}

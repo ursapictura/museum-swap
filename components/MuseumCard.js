@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { deleteMuseumArtworks } from '../api/mergeData';
 
 function MuseumCard({ museumObj, onUpdate }) {
-  console.warn(museumObj);
   const deleteThisMuseum = () => {
     if (window.confirm(`Delete ${museumObj.name}?`)) {
       deleteMuseumArtworks(museumObj.firebaseKey).then(() => onUpdate());
