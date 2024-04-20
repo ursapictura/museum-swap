@@ -2,8 +2,8 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-const getArtworks = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks.json?orderBy="uid"&equalTo="${uid}"`, {
+const getMuseums = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/museums.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -20,8 +20,8 @@ const getArtworks = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const createArtwork = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks.json`, {
+const createMuseum = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/museums.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -33,8 +33,8 @@ const createArtwork = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleArtwork = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks/${firebaseKey}.json`, {
+const getSingleMuseum = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/museums/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -45,8 +45,8 @@ const getSingleArtwork = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const updateArtwork = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks/${payload.firebaseKey}.json`, {
+const updateMuseum = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/museums/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -58,8 +58,8 @@ const updateArtwork = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteSingleArtwork = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks/${firebaseKey}.json`, {
+const deleteSingleMuseum = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/museums/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -70,23 +70,10 @@ const deleteSingleArtwork = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getMuseumArtworks = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/artworks.json?orderBy="museum_id"&equalTo="${firebaseKey}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
-    .catch(reject);
-});
-
 export {
-  getArtworks,
-  createArtwork,
-  getSingleArtwork,
-  updateArtwork,
-  deleteSingleArtwork,
-  getMuseumArtworks,
+  getMuseums,
+  createMuseum,
+  getSingleMuseum,
+  updateMuseum,
+  deleteSingleMuseum,
 };
