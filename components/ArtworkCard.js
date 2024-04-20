@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { deleteSingleArtwork } from '../api/artworkData';
 
 function ArtworkCard({ artObj, onUpdate }) {
-  console.warn(artObj);
   const deleteThisArtwork = () => {
     if (window.confirm(`Delete ${artObj.title}?`)) {
       deleteSingleArtwork(artObj.firebaseKey).then(() => onUpdate());
@@ -16,9 +15,9 @@ function ArtworkCard({ artObj, onUpdate }) {
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ width: '18rem' }} />
       <Card.Body>
-        <Card.Title>{artObj.title}</Card.Title>
+        <Card.Title className="art-title">{artObj.title}</Card.Title>
         <h5 className="card-text bold">{artObj.artist}</h5>
-        <p className="card-text">{artObj.medium}</p>
+        <h6 className="card-text">{artObj.medium}</h6>
         <Link href={`/artwork/edit/${artObj.firebaseKey}`} passHref>
           <Button variant="outline-info">EDIT</Button>
         </Link>
@@ -36,6 +35,7 @@ ArtworkCard.propTypes = {
     title: PropTypes.string,
     artist: PropTypes.string,
     medium: PropTypes.string,
+    museum_id: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

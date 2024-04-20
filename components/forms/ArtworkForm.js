@@ -5,6 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { Form, Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { createArtwork, updateArtwork } from '../../api/artworkData';
+import { getMuseums } from '../../api/museumData';
 
 const initialState = {
   title: '',
@@ -14,12 +15,15 @@ const initialState = {
 
 function ArtworkForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [museums, setMuseums] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getMuseums(user.uid).then(setMuseums);
+
     if (obj.firebaseKey) setFormInput(obj);
-  }, [obj]);
+  }, [obj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +42,7 @@ function ArtworkForm({ obj }) {
       createArtwork(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateArtwork(patchPayload).then(() => {
-          router.push('/');
+          router.push('/artworks');
         });
       });
     }
@@ -60,8 +64,20 @@ function ArtworkForm({ obj }) {
         />
       </FloatingLabel>
 
+      {/* ARTIST INPUT  */}
+      <FloatingLabel controlId="floatingInput2" label="Artist's Name" className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Artist's Name"
+          name="artist"
+          value={formInput.artist}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
       {/* IMAGE INPUT  */}
-      <FloatingLabel controlId="floatingInput2" label="image" className="mb-3">
+      <FloatingLabel controlId="floatingInput3" label="image" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter Artwork Image URL"
@@ -72,8 +88,8 @@ function ArtworkForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* PRICE INPUT  */}
-      <FloatingLabel controlId="floatingInput3" label="medium" className="mb-3">
+      {/* MEDIUM INPUT  */}
+      <FloatingLabel controlId="floatingInput4" label="medium" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter Artwork Medium"
@@ -82,6 +98,29 @@ function ArtworkForm({ obj }) {
           onChange={handleChange}
           required
         />
+      </FloatingLabel>
+
+      <FloatingLabel controlId="floatingSelect" label="museum">
+        <Form.Select
+          aria-label="Museum"
+          name="museum_id"
+          onChange={handleChange}
+          className="mb-3"
+          value={formInput.museum_id}
+          required
+        >
+          <option value="">Select a Museum</option>
+          {
+            museums.map((museum) => (
+              <option
+                key={museum.firebaseKey}
+                value={museum.firebaseKey}
+              >
+                {museum.name}
+              </option>
+            ))
+          }
+        </Form.Select>
       </FloatingLabel>
 
       {/* SUBMIT BUTTON  */}
@@ -95,6 +134,7 @@ ArtworkForm.propTypes = {
     title: PropTypes.string,
     image: PropTypes.string,
     medium: PropTypes.string,
+    museum_id: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };
