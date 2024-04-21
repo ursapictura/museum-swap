@@ -10,6 +10,7 @@ const initialState = {
   name: '',
   image: '',
   location: '',
+  private: false,
 };
 
 function MuseumForm({ obj }) {

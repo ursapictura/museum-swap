@@ -2,9 +2,8 @@ import {
   deleteSingleArtwork,
   getArtworks,
   getMuseumArtworks,
-  getSingleArtwork,
 } from './artworkData';
-import { deleteSingleMuseum, getSingleMuseum, getMuseumArtwork } from './museumData';
+import { deleteSingleMuseum, getSingleMuseum } from './museumData';
 
 const searchArtwork = async (uid, searchQuery) => {
   const allArtworks = await getArtworks(uid);
@@ -26,18 +25,8 @@ const deleteMuseumArtworks = (museumId) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-const getArtworkLocation = (artworkFirebaseKey) => new Promise((resolve, reject) => {
-  getSingleArtwork(artworkFirebaseKey)
-    .then((artObj) => {
-      getSingleArtwork(artObj.museum_id)
-        .then((museumObj) => {
-          resolve({ museumObj, ...artObj });
-        });
-    }).catch((error) => reject(error));
-});
-
 const viewMuseumDetails = (museumFirebaseKey) => new Promise((resolve, reject) => {
-  Promise.all([getSingleMuseum(museumFirebaseKey), getMuseumArtwork(museumFirebaseKey)])
+  Promise.all([getSingleMuseum(museumFirebaseKey), getMuseumArtworks(museumFirebaseKey)])
     .then(([museumObject, museumArtworkArray]) => {
       resolve({ ...museumObject, artworks: museumArtworkArray });
     }).catch((error) => reject(error));
@@ -46,6 +35,5 @@ const viewMuseumDetails = (museumFirebaseKey) => new Promise((resolve, reject) =
 export {
   searchArtwork,
   deleteMuseumArtworks,
-  getArtworkLocation,
   viewMuseumDetails,
 };
