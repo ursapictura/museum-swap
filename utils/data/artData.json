@@ -1,0 +1,92 @@
+{
+  "-NvZgT7V4dM4tYpSBDGS": {
+    "artist": "Vincent Van Gogh",
+    "firebaseKey": "-NvZgT7V4dM4tYpSBDGS",
+    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436524/800285/main-image",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxcaqSNWY3zDw3iq",
+    "title": "Sunflowers",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NvdI-Wund97mEszU4la": {
+    "artist": "Gustav Klimt",
+    "firebaseKey": "-NvdI-Wund97mEszU4la",
+    "image": "https://hips.hearstapps.com/hmg-prod/images/lady-with-fan-d203-oil-on-canvas-by-gustav-klimt-100-100-cm-news-photo-1686755953.jpg?crop=1xw:0.99832xh;center,top&resize=640:*",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxcdszhv4YpBHcQN",
+    "title": "Lady with Fan",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NvdJPVEuULIntfNowNX": {
+    "artist": "Marcel Duchamp",
+    "firebaseKey": "-NvdJPVEuULIntfNowNX",
+    "image": "https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2Fi-8Le397-h2ZTgLM1iMegw%252FMarcel_Duchamp.jpg&width=450",
+    "medium": "readymade",
+    "museum_id": "-NvTrxcbjKLm_6nfoMOv",
+    "title": "Fountain",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NvdLaVYkYJGHsaxSx9W": {
+    "artist": "Vasily Kandinsky",
+    "firebaseKey": "-NvdLaVYkYJGHsaxSx9W",
+    "image": "https://www.guggenheim.org/wp-content/uploads/1923/01/37.262_ph_web-1.jpg",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxcbjKLm_6nfoMOv",
+    "title": "Composition 8",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NvdLr_Rc1iMJtHeEbhk": {
+    "artist": "Pablo Picasso",
+    "firebaseKey": "-NvdLr_Rc1iMJtHeEbhk",
+    "image": "https://www.amacad.org/sites/default/files/media/images/guernica2.png",
+    "medium": "oil painting",
+    "museum_id": "-NvtB_dkwMz8ATkKnywX",
+    "title": "Guernica",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NvdMENpOHUbUAnwzE32": {
+    "artist": "Johannes Vermeer",
+    "firebaseKey": "-NvdMENpOHUbUAnwzE32",
+    "image": "https://galeriemontblanc.com/cdn/shop/files/LaLiseusealafenetre_f99220e2-a2b2-4d3b-bded-fef36b00fd48_900x.jpg?v=1688559533",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxcaqSNWY3zDw3ip",
+    "title": "Girl Reading a Letter at an Open Window",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-Nvio0coGPjWtCM8q6XJ": {
+    "artist": "Sandro Botticelli",
+    "firebaseKey": "-Nvio0coGPjWtCM8q6XJ",
+    "image": "https://media.timeout.com/images/105795964/750/422/image.jpg",
+    "medium": "oil painting",
+    "museum_id": "-Nvt3PkE_UZmJ1JbWTL0",
+    "title": "Birth of Venus",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-Nvw-7ggqGF-taSeaS5Z": {
+    "artist": "Artemisia Gentileschi",
+    "firebaseKey": "-Nvw-7ggqGF-taSeaS5Z",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg/440px-Gentileschi%2C_Artemisia_-_Esther_before_Ahasuerus_-_c._1628%E2%80%931635.jpg",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxc_fJ39TwfYbyi_",
+    "title": "Esther Before Ahasuerus",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-Nvw-ZPssH_dMBFMLsDy": {
+    "artist": "Claude Monet",
+    "firebaseKey": "-Nvw-ZPssH_dMBFMLsDy",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Reflections_of_Clouds_on_the_Water-Lily_Pond.jpg/400px-Reflections_of_Clouds_on_the_Water-Lily_Pond.jpg",
+    "medium": "oil painting",
+    "museum_id": "-NvTrxcbjKLm_6nfoMOv",
+    "title": "Water Lilies",
+    "uid": "ccm5iCdVUkPAJaCEJdHL6yESw503"
+  },
+  "-NwbCK5XCnAasost_nUx": {
+    "artist": "Ben and Jerry",
+    "firebaseKey": "-NwbCK5XCnAasost_nUx",
+    "image": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSRA1VvVWshDqdk-IbClyNwWoUAjMnFQ5KQLb8eH0hu4gCCvfvqMEcQqOF-CTro2maW",
+    "medium": "dairy",
+    "museum_id": "-NvTrxc_fJ39TwfYbyi_",
+    "title": "Ice Cream ",
+    "uid": "6tYGHHgG2aRzpRahaKnLtocXsgb2"
+  }
+}

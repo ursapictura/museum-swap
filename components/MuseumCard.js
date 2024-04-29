@@ -12,7 +12,7 @@ function MuseumCard({ museumObj, onUpdate }) {
   };
 
   return (
-    <Card key={museumObj.firebaseKey} style={{ width: '18rem', margin: '10px' }}>
+    <Card key={museumObj.firebaseKey} style={{ width: '18rem', margin: '10px', textAlign: 'center' }}>
       <Card.Img variant="top" src={museumObj.image} alt={museumObj.name} style={{ width: '18rem' }} />
       <Card.Body>
         <Card.Title className="art-title">{museumObj.name}</Card.Title>
@@ -20,12 +20,17 @@ function MuseumCard({ museumObj, onUpdate }) {
         <Link href={`/museum/${museumObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
-        <Link href={`/museum/edit/${museumObj.firebaseKey}`} passHref>
-          <Button variant="outline-info">EDIT</Button>
-        </Link>
-        <Button variant="outline-dark" onClick={deleteThisMuseum} className="m-2">
-          DELETE
-        </Button>
+        {!museumObj.private
+          ? (
+            <>
+              <Link href={`/museum/edit/${museumObj.firebaseKey}`} passHref>
+                <Button variant="outline-info">EDIT</Button>
+              </Link>
+              <Button variant="outline-dark" onClick={deleteThisMuseum} className="m-2">DELETE
+              </Button>
+            </>
+          )
+          : ''}
       </Card.Body>
     </Card>
   );
@@ -37,6 +42,7 @@ MuseumCard.propTypes = {
     name: PropTypes.string,
     location: PropTypes.string,
     firebaseKey: PropTypes.string,
+    private: PropTypes.bool,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

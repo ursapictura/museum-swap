@@ -16,7 +16,7 @@ function ShowArtworks({ search }) {
 
   if (search === '') {
     getAllTheArtworks = () => {
-      getArtworks(user.uid).then(setArtworks);
+      getArtworks().then(setArtworks);
     };
   } else {
     getAllTheArtworks = () => {
