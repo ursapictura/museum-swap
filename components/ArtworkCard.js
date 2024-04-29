@@ -26,7 +26,9 @@ function ArtworkCard({ artObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem', margin: '10px', textAlign: 'center' }}>
-      <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ width: '18rem' }} />
+
+      {museum ? <Card.Img variant="top" src={museum.private ? museum.image : artObj.image} alt={artObj.title} style={{ width: '18rem' }} /> : <Card.Img variant="top" src={artObj.image} alt={artObj.title} style={{ width: '18rem' }} /> }
+
       <Card.Body>
         <Card.Title className="art-title">{artObj.title}</Card.Title>
         <h5 className="card-text bold">{artObj.artist}</h5>
