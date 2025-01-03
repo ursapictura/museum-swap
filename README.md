@@ -18,7 +18,7 @@
 ## Project Overview
 For this project I used React to create an application that allows users to trade famous artworks between museums. Users can add their favorite artworks and museums to the list and curate their perfect artwork collection for each museum. All museums and artworks can be deleted or edited save for the Private Collections option in the museum section. 
 
-Private Collections represents the thousands of private art collectors around the world who keep priceless works-of-art behind closed doors. When an artwork is moved to P{rivate Collections, the artwork can no longer be viewed. Instead, the artwork is hidden behind the image of a vault. 
+Private Collections represents the thousands of private art collectors around the world who keep priceless works-of-art behind closed doors. When an artwork is moved to Private Collections, the artwork can no longer be viewed. Instead, the artwork is hidden behind the image of a vault. 
 
 Want to see an artwork hidden in Private Collections? Support public museums! When puiblic museums are supported, they can aquire artworks from Private Collections and showcase these important pieces to the world! Change an artwork's location from Private Collections to another museum within the app to view it. 
 
