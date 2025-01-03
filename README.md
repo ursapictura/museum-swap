@@ -11,7 +11,7 @@
 
 [Project Board](https://github.com/users/ursapictura/projects/3)
 
-[Video Demo]()
+[Video Demo](https://www.loom.com/share/c702696b949e4562bb806443391dabea?sid=a6ea0e14-94b7-42de-af54-e56c9d33a29d)
 
 
 
